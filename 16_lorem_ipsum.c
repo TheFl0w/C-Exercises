@@ -11,6 +11,5 @@ int main() {
         "eos et accusam et justo duo dolores et ea rebum.\n";
     for (unsigned i = 0; i < sizeof(str); i++)
         printf("%c", str[i]);
-    printf("\n");
     return 0;
 }
