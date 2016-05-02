@@ -13,19 +13,21 @@
 \usepackage{listings}
 \usepackage{enumitem}
 \usepackage{amsmath}
-\lstset{language=C, basicstyle=\ttfamily, keywordstyle=\color[HTML]{4271AE}\bfseries,
-                stringstyle=\color[HTML]{F5871F}\ttfamily,
-		showstringspaces=false,
-                commentstyle=\color[HTML]{718C00}\ttfamily,
-                morecomment=[l][\color{magenta}]{\#}}
+\lstset{language=C, 
+	basicstyle=\ttfamily, 
+	keywordstyle=\color[HTML]{4271AE}\bfseries, 
+	stringstyle=\color[HTML]{F5871F}\ttfamily, 
+	showstringspaces=false, 
+	commentstyle=\color[HTML]{718C00}\ttfamily, 
+	morecomment=[l][\color{magenta}]{\#}}
 \begin{document}
 \faculty{Fakultät Informatik}
 \department{Programmierkurs C/C++}
 %
 \section*{Boolsche Werte und Schleifen}
 \begin{enumerate}
-\item Gegeben seien folgende Ausdrücke.
-\begin{lstlisting}[frame=single]
+	\item Gegeben seien folgende Ausdrücke.
+	      \begin{lstlisting}[frame=single]
 /* i) */
 (2 <= 3)
 /* ii) */
@@ -42,21 +44,21 @@ int a = 10, b = 9;
 /* vi) */
 int a = 10, b = 9;
 ((a == b) || (b == a)) || (a == ++b)
-\end{lstlisting}
-\begin{enumerate}
-\item Geben Sie für die Ausdrücke i) bis vi) jeweils an, ob sie auf true oder false abgebildet werden.
-\begin{labeling}{iiii}
-\item [i] :
-\item [ii] :
-\item [iii] :
-\item [iv] : 
-\item [v] : 
-\item [vi] :
-\end{labeling}
-\end{enumerate}
-\pagebreak
-\item Gegeben seien folgende Schleifen.
-\begin{lstlisting}[frame=single]
+	\end{lstlisting}
+	\begin{enumerate}
+		\item Geben Sie für die Ausdrücke i) bis vi) jeweils an, ob sie auf true oder false abgebildet werden.
+		      \begin{labeling}{iiii}
+		      	\item [i] :
+		      	\item [ii] :
+		      	\item [iii] :
+		      	\item [iv] : 
+		      	\item [v] : 
+		      	\item [vi] :
+		      \end{labeling}
+	\end{enumerate}
+	\pagebreak
+	\item Gegeben seien folgende Schleifen.
+	      \begin{lstlisting}[frame=single]
 /* i) */
 for (int i = 0; i < 5; i++) {
 /* .. */
@@ -70,22 +72,22 @@ int i = 2;
 do {
 /* .. */
 } while (i < 2);
-\end{lstlisting}
-\begin{enumerate}
-\item Geben Sie für die Ausdrücke i) bis iii) jeweils an, wie oft der Schleifenrumpf ausgeführt wird.
-\begin{labeling}{iiii}
-\item [i] :
-\item [ii] :
-\item [iii] :
-\end{labeling}
-\end{enumerate}
+	\end{lstlisting}
+	\begin{enumerate}
+		\item Geben Sie für die Ausdrücke i) bis iii) jeweils an, wie oft der Schleifenrumpf ausgeführt wird.
+		      \begin{labeling}{iiii}
+		      	\item [i] :
+		      	\item [ii] :
+		      	\item [iii] :
+		      \end{labeling}
+	\end{enumerate}
 \end{enumerate}
 \pagebreak
 \section*{Funktionen}
 \begin{enumerate}
-\setcounter{enumi}{1}
-\item Gegeben seien folgende Funktionen.
-\begin{lstlisting}[frame=single]
+	\setcounter{enumi}{1}
+	\item Gegeben seien folgende Funktionen.
+	      \begin{lstlisting}[frame=single]
 unsigned long long f(unsigned n) {
     if (n == 0)
         return 1;
@@ -104,18 +106,18 @@ unsigned h(unsigned n) {
     else
         return n + h(n - 1);
 }
-\end{lstlisting}
-\begin{enumerate}
-\item Geben Sie die folgenden Funktionswerte an.
-  \begin{enumerate}[label=\roman*)]
-    \item f(5)
-    \item g(4, 7)
-    \item h(10)
-  \end{enumerate}
-\item Geben Sie für die Funktionen f, g und h jeweils ein mathematisches Äquivalent an.
-\item Schreiben Sie die Funktion h so um, dass sie einen for-Loop statt Rekursion zur Berechnung verwendet um den Stack klein zu halten.
-\item Schreiben Sie eine Funktion binom, die als Parameter $n$ und $k$ erhält. Sie soll als Ergebnis den Wert des Binomialkoeffizienten $\binom{n}{k}$ als Ganzzahl zurückgeben.
-\item Überlegen Sie, wie man die Berechnung des Binomialkoeffizienten für große $k$ vereinfachen kann.
-\end{enumerate}
+	\end{lstlisting}
+	\begin{enumerate}
+		\item Geben Sie die folgenden Funktionswerte an.
+		      \begin{enumerate}[label=\roman*)]
+		      	\item f(5)
+		      	\item g(4, 7)
+		      	\item h(10)
+		      \end{enumerate}
+		\item Geben Sie für die Funktionen f, g und h jeweils ein mathematisches Äquivalent an.
+		\item Schreiben Sie die Funktion h so um, dass sie einen for-Loop statt Rekursion zur Berechnung verwendet um den Stack klein zu halten.
+		\item Schreiben Sie eine Funktion binom, die als Parameter $n$ und $k$ erhält. Sie soll als Ergebnis den Wert des Binomialkoeffizienten $\binom{n}{k}$ als Ganzzahl zurückgeben.
+		\item Überlegen Sie, wie man die Berechnung des Binomialkoeffizienten für große $k$ vereinfachen kann.
+	\end{enumerate}
 \end{enumerate}
 \end{document}
