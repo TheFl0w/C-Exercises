@@ -1,3 +1,6 @@
+/*
+ * 20 - Complex numberss
+ */
 #include <stdio.h>
 #include <math.h>
 
@@ -10,6 +13,7 @@ struct complex scanComplex();
 void printComplex(struct complex c);
 struct complex addComplex(struct complex c, struct complex d);
 struct complex multComplex(struct complex c, struct complex d);
+double absComplex(struct complex c);
 
 struct complex scanComplex() {
     struct complex result;
@@ -34,6 +38,10 @@ struct complex multComplex(struct complex c, struct complex d) {
     return result;
 }
 
+double absComplex(struct complex c) {
+    return sqrt(c.real * c.real + c.imaginary * c.imaginary);
+}
+
 int main() {
     struct complex x, y;
     printf("Input of x --> (a + bi): ");
@@ -46,6 +54,9 @@ int main() {
     printf("\ny: ");
     printComplex(y);
     puts("\n--------------------");
+    printf("|x|: %lf\n", absComplex(x));
+    printf("|y|: %lf\n", absComplex(y));
+    puts("--------------------");
     printf("x + y: ");
     printComplex(addComplex(x, y));
     printf("\nx * y: ");

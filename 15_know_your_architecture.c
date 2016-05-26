@@ -1,15 +1,16 @@
 /*
- * 15 - Know Your Architecture
+ * 15 - Know your architecture
  */
-
 #include <stdio.h>
-#include <stdbool.h>
 
 int main() {
-    printf("bool:\t%lu byte(s) = %lu bits\n", sizeof(bool), 8 * sizeof(bool));
-    printf("char:\t%lu byte(s) = %lu bits\n", sizeof(char), 8 * sizeof(char));
-    printf("short:\t%lu byte(s) = %lu bits\n", sizeof(short), 8 * sizeof(short));
-    printf("int:\t%lu byte(s) = %lu bits\n", sizeof(int), 8 * sizeof(int));
-    printf("float:\t%lu byte(s) = %lu bits\n", sizeof(float), 8 * sizeof(float));
-    printf("double:\t%lu byte(s) = %lu bits\n", sizeof(double), 8 * sizeof(double));
+    const char ids[6][15] = { "char", "int", "long", "l long", "float", "double" };
+    unsigned long sizes[] = { sizeof(char), sizeof(int), sizeof(long), sizeof(long long), sizeof(float), sizeof(double) };
+    printf("Size:\t\tbytes \tbits\n");
+    printf("---------------------------\n");
+    for (int i = 0; i < sizeof(sizes) / sizeof(sizes[0]); i++) {
+        printf("%s\t\t%lu\t%lu\n", ids[i], sizes[i], 8 * sizes[i]);
+    }
+
+    return 0;
 }
